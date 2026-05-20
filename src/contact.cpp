@@ -1,4 +1,4 @@
-#include "includes/contact.h"
+#include "contact.h"
 
 #include<iostream>
 
@@ -10,9 +10,9 @@ Contact::Contact(std::string name, std::string number, std::string email)
 
 void Contact::displayContact() const
 {
-    std::cout << "Name: " << name << "\n";
-    std::cout << "Number: " << number << "\n";
-    std::cout << "Email: " << email << "\n";
+    std::cout << "Name: " << name << std::endl;
+    std::cout << "Number: " << number << std::endl;
+    std::cout << "Email: " << email << std::endl << std::endl;
 }
 
 const std::string& Contact::getName() const
