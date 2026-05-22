@@ -32,3 +32,13 @@ void Contact::setName(const std::string& name)
 {
     this->name = name;
 }
+
+void Contact::setNumber(const std::string& number)
+{
+    this->number = number;
+}
+
+void Contact::setEmail(const std::string& email)
+{
+    this->email = email;
+}

@@ -10,11 +10,13 @@ class ContactManager
         std::vector<Contact> contacts;
 
     public:
-        void addContact(const Contact& contact);
-        bool deleteContact(const std::string& number);
+        ContactManager();
+        bool addContact(const Contact& contact);
         Contact* searchContact(const std::string& query);
+        bool deleteContact(const std::string& number);
+        bool editContact(const int& choice, const std::string& data, Contact* contact);
         void displayAllContacts() const;
-        void saveToFile();
-        void loadFromFile();
+        bool saveToFile();
+        bool loadFromFile();
 };
 

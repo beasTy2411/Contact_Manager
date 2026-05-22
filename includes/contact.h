@@ -16,4 +16,6 @@ class Contact
         const std::string& getNumber() const;
         const std::string& getEmail() const;
         void setName(const std::string& name);
+        void setNumber(const std::string& number);
+        void setEmail(const std::string& email);
 };

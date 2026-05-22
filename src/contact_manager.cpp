@@ -2,30 +2,37 @@
 
 #include <iostream>
 #include <algorithm>
+#include <fstream>
+#include <sstream>
 
 #define DEBUG 0
 
-void ContactManager::addContact(const Contact& contact)
+ContactManager::ContactManager()
+{
+    loadFromFile();
+}
+
+bool ContactManager::addContact(const Contact& contact)
 {   
-    size_t duplicate = 0;
     if(searchContact(contact.getNumber()))
     {
-        duplicate = 1;
-    }
-    if(!duplicate)
-    {
-        contacts.push_back(contact);
-        std::cout << "Contact Added Successfully \n" << std::endl;
-    }
-    else
-    {
-        std::cout << "Duplicate Contact \n" << std::endl;
-    }
-    // std::sort(contacts.begin(), contacts.end());
+       return false;
+    } 
 
-#if DEBUG
-    displayAllContacts();
-#endif
+    contacts.push_back(contact);
+    return true;
+}
+
+Contact* ContactManager::searchContact(const std::string& query)
+{
+    for(Contact& contact : contacts)
+    {
+        if(contact.getNumber() == query)
+        {
+            return &contact;
+        }
+    }
+    return nullptr;
 }
 
 bool ContactManager::deleteContact(const std::string& number)
@@ -43,16 +50,43 @@ bool ContactManager::deleteContact(const std::string& number)
     return true;    
 }
 
-Contact* ContactManager::searchContact(const std::string& query)
+
+bool ContactManager::editContact(const int& choice, const std::string& data, Contact* contact)
 {
-    for(Contact& contact : contacts)
+    switch(choice)
     {
-        if(contact.getNumber() == query)
+        case 1:
         {
-            return &contact;
+            contact->setName(data);
+            return true;
+            break;
         }
+        case 2:
+        {   
+            Contact *sContact = searchContact(data);
+            if(sContact != nullptr && sContact != contact) 
+            {   
+                return false;
+                break;
+            }
+            else    
+            {
+                contact->setNumber(data);
+                return true;
+                break;
+            }
+        }
+        case 3:
+        {
+            contact->setEmail(data);
+            return true;
+            break;
+        }
+        default:
+        return false;
+            break;
     }
-    return nullptr;
+
 }
 
 void ContactManager::displayAllContacts() const
@@ -63,12 +97,63 @@ void ContactManager::displayAllContacts() const
     }
 }
 
-void ContactManager::saveToFile()
+bool ContactManager::saveToFile()
 {
-    
+    std::ofstream myfile;
+    myfile.open("data/contacts.csv", std::ios::trunc);
+
+    if(!myfile.is_open())
+    {
+       return false;
+    }
+
+    for(auto it = contacts.begin(); it != contacts.end(); ++it )
+    {
+        myfile << it->getName() << "," << it->getNumber() << "," << it->getEmail();
+        myfile << std::endl;
+    }
+
+    myfile.close();
+    return true;    
 }
 
-void ContactManager::loadFromFile()
+bool ContactManager::loadFromFile()
 {
+    std::ifstream myfile;
+    myfile.open("data/contacts.csv");
 
+    if(!myfile.is_open())
+    {
+        return false;
+    }
+
+    contacts.clear();
+
+    std::vector<std::string> row;
+    std::string line, word;
+    while(std::getline(myfile, line, '\n'))
+    {   
+        row.clear();
+        std::stringstream s(line);
+        while(std::getline(s, word, ','))
+        {
+            row.push_back(word);
+        }
+        
+        if(row.size() == 3)
+        {
+            Contact contact(row[0], row[1], row[2]); 
+            contacts.push_back(contact);
+        }   
+
+        #if DEBUG
+        std::cout << "Name: " << row[0] << std::endl;
+        std::cout << "Number: " << row[1] << std::endl;
+        std::cout << "Email: " << row[2] << std::endl;
+        #endif
+        
+    }
+
+    myfile.close();
+    return true;
 }
