@@ -156,24 +156,23 @@ CSV File Storage
 
 # Current Project Structure
 
+```text
 Contact_Manager/
-|   CMakeLists.txt
-|   README.MD
-|
-+---build
-|   |   Contact_Manager.exe
-|   |   Makefile
-+---data
-+---includes
-|    |  contact.h
-|    |  contact_manager.h
-|
-+---src
-|    |  contact.cpp
-|    |  contact_manager.cpp
-|    |  main.cpp
-|
-+---tests
+├── build/
+│   ├── Contact_Manager.exe
+│   └── Makefile
+├── data/
+├── includes/
+│   ├── contact.h
+│   └── contact_manager.h
+├── src/
+│   ├── contact.cpp
+│   ├── contact_manager.cpp
+│   └── main.cpp
+├── tests/
+├── CMakeLists.txt
+└── README.md
+```
 
 ---
 
