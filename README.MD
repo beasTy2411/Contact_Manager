@@ -157,41 +157,46 @@ CSV File Storage
 # Current Project Structure
 
 Contact_Manager/
-│
-├── CMakeLists.txt
+|   CMakeLists.txt
+|   README.MD
 |
-├── README.MD
-│
-├── includes/
-│   ├── contact.h
-│   └── contact_manager.h
-│
-├── src/
-│   ├── main.cpp
-│   ├── contact.cpp
-│   └── contact_manager.cpp
-│
-├── build/
-│
-└── data/
-    └── contacts.csv
++---build
+|   |   Contact_Manager.exe
+|   |   Makefile
++---data
++---includes
+|    |  contact.h
+|    |  contact_manager.h
+|
++---src
+|    |  contact.cpp
+|    |  contact_manager.cpp
+|    |  main.cpp
+|
++---tests
 
 ---
 
 # Current Workflow
 
+```text
 User Interaction
-      ↓
+       │
+       ▼
 UI Layer (main.cpp)
-      ↓
+       │
+       ▼
 Backend Validation & Operations
-      ↓
+       │
+       ▼
 STL Vector Storage
-      ↓
+       │
+       ▼
 Persistence System
-      ↓
+       │
+       ▼
 CSV File
-
+```
 ---
 
 # Upcoming Enhancements
@@ -302,10 +307,10 @@ This project also acts as a stepping stone toward:
 ACTIVE DEVELOPMENT
 
 ## Current Phase:
-Backend CRUD System Completed
-Persistence Lifecycle Completed
-Validation System Completed
-Sorting System Completed
+- Backend CRUD System Completed
+- Persistence Lifecycle Completed
+- Validation System Completed
+- Sorting System Completed
 
 ## Next Phase:
 Current Focus:
