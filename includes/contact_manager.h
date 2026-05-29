@@ -15,7 +15,8 @@ class ContactManager
         Contact* searchContact(const std::string& query);
         bool deleteContact(const std::string& number);
         bool editContact(const int& choice, const std::string& data, Contact* contact);
-        void displayAllContacts() const;
+        bool displayAllContacts() const;
+        bool sortAllContacts();
         bool saveToFile();
         bool loadFromFile();
 };

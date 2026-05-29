@@ -20,6 +20,7 @@ bool ContactManager::addContact(const Contact& contact)
     } 
 
     contacts.push_back(contact);
+    saveToFile();
     return true;
 }
 
@@ -47,6 +48,7 @@ bool ContactManager::deleteContact(const std::string& number)
     if(it == contacts.end()) return false;
 
     contacts.erase(it);
+    saveToFile();
     return true;    
 }
 
@@ -58,8 +60,8 @@ bool ContactManager::editContact(const int& choice, const std::string& data, Con
         case 1:
         {
             contact->setName(data);
+            if(!saveToFile()) return false;
             return true;
-            break;
         }
         case 2:
         {   
@@ -67,34 +69,54 @@ bool ContactManager::editContact(const int& choice, const std::string& data, Con
             if(sContact != nullptr && sContact != contact) 
             {   
                 return false;
-                break;
             }
             else    
             {
                 contact->setNumber(data);
+                if(!saveToFile()) return false;
                 return true;
-                break;
             }
         }
         case 3:
         {
             contact->setEmail(data);
+            if(!saveToFile()) return false;
             return true;
-            break;
         }
         default:
         return false;
             break;
     }
-
 }
 
-void ContactManager::displayAllContacts() const
-{
-    for(const Contact& contact : contacts)
+bool ContactManager::displayAllContacts() const
+{   
+    if(contacts.size() == 0)
     {
-        contact.displayContact();
+        return false;
     }
+    else
+    {
+        for(const Contact& contact : contacts)
+        {
+            contact.displayContact();
+        }
+    }
+    return true;
+}
+
+bool ContactManager::sortAllContacts()
+{
+    std::sort(contacts.begin(), contacts.end(),
+             [](const Contact& a, const Contact& b)
+             {return a.getName() < b.getName();}
+            );
+    if(!saveToFile())
+    {
+        return false;
+    }
+
+    return true;
 }
 
 bool ContactManager::saveToFile()

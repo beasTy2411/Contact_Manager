@@ -18,7 +18,8 @@ int main()
         std::cout << "3. Delete Contact" << std::endl;
         std::cout << "4. Edit Contact" << std::endl;
         std::cout << "5. Display All Contacts" << std::endl;
-        std::cout << "6. Save Contacts to File" << std::endl;
+        // std::cout << "6. Save Contacts to File" << std::endl;
+        std::cout << "6. Sort All Contacts" << std::endl;
         std::cout << "7. Load Contacts from File" << std::endl;
         std::cout << "0. Quit" << std::endl;
         std::cout << "Enter choice: ";
@@ -158,19 +159,38 @@ int main()
 
         case 5:
         {   
-            manager.displayAllContacts();
+            bool status = manager.displayAllContacts();
+            if(!status) 
+                std::cout << "Contact List is Empty\n" << std::endl;
             break;
         }
 
+        // SAVING DATA TO THE FILE IMPLEMENTED AUTOMATICALLY
+        // case 6: 
+        // {   bool status;
+        //     status = manager.saveToFile();
+        //     if(status)
+        //     {
+        //         std::cout << "File saved successfully\n" << std:: endl;
+        //     }
+        //     else{
+        //         std::cout << "Failed to open the file\n" << std::endl;
+        //     }
+        //     break;
+        // }
+
         case 6: 
-        {   bool status;
-            status = manager.saveToFile();
+        {
+            bool status;
+            status = manager.sortAllContacts();
+
             if(status)
             {
-                std::cout << "File saved successfully\n" << std:: endl;
+                std::cout << "Contacts Sorted Successfully\n" << std::endl;
             }
-            else{
-                std::cout << "Failed to open the file\n" << std::endl;
+            else
+            {
+                std::cout << "Failed to Sort Contacts\n" << std::endl;
             }
             break;
         }
