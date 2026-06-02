@@ -1,3 +1,4 @@
+// CONTACT CLASS IMPLEMENTATION
 #include "contact.h"
 
 #include<iostream>

@@ -1,3 +1,4 @@
+// CLASS CONTACT MANAGER IMPLEMENTATION
 #include "contact_manager.h"
 
 #include <iostream>
