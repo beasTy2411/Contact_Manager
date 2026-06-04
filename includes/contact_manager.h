@@ -51,5 +51,13 @@ class ContactManager
             RETURNS BOOL VALUE BASED ON OPERATION STATUS
             ALSO RUNS ON THE EXECUTION OF THE APPLICATION*/
         bool loadFromFile();
+
+        /* SEARCH CONTACTS BY NAME 
+            RETURN A VECTOR OF FOUND CONTACT WHICH CONTAINS THE QUERIED SUBSTRING */
+        std::vector<Contact*> searchContactsByName(const std::string &query);
+
+        /* HELPER FUNCTION FOR SEARCH CONTACTS BY NAME
+            IT CONVERTS THE INPUT TO LOWERCASE AND RETURNS THE STRING*/
+        void toLowerCase(std::string& query);
 };
 

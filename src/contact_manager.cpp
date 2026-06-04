@@ -5,6 +5,8 @@
 #include <algorithm>
 #include <fstream>
 #include <sstream>
+#include <cctype>
+#include <string>
 
 #define DEBUG 0
 
@@ -179,4 +181,34 @@ bool ContactManager::loadFromFile()
 
     myfile.close();
     return true;
+}
+
+std::vector<Contact*> ContactManager::searchContactsByName(const std::string &query)
+{   
+    std::vector<Contact*> found_contacts;
+
+    std::string lowercase_query = query;
+    toLowerCase(lowercase_query);
+
+    for(Contact &contact : contacts)
+    {
+        std::string lowercase_contact_name = contact.getName();
+        toLowerCase(lowercase_contact_name);
+
+        if(lowercase_contact_name.compare(0, lowercase_query.length(), lowercase_query) == 0)
+        {
+            found_contacts.push_back(&contact);
+        }
+    }
+
+    return found_contacts;
+}
+
+void ContactManager::toLowerCase(std::string& query)
+{
+    for(char &c: query)
+    {
+        c = static_cast<char>(std::tolower(static_cast<unsigned char> (c)));
+    }
+
 }

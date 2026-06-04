@@ -20,12 +20,13 @@ int main()
     {   
         std::cout << "1. Add Contact" << std::endl;
         std::cout << "2. Search Contact" << std::endl;
-        std::cout << "3. Delete Contact" << std::endl;
-        std::cout << "4. Edit Contact" << std::endl;
-        std::cout << "5. Display All Contacts" << std::endl;
+        std::cout << "3. Search Contact by Name" << std::endl;
+        std::cout << "4. Delete Contact" << std::endl;
+        std::cout << "5. Edit Contact" << std::endl;
+        std::cout << "6. Display All Contacts" << std::endl;
         // std::cout << "6. Save Contacts to File" << std::endl;
-        std::cout << "6. Sort All Contacts" << std::endl;
-        std::cout << "7. Load Contacts from File" << std::endl;
+        std::cout << "7. Sort All Contacts" << std::endl;
+        std::cout << "8. Load Contacts from File" << std::endl;
         std::cout << "0. Quit" << std::endl;
         std::cout << "Enter choice: ";
         std::cin >> choice;
@@ -80,8 +81,36 @@ int main()
                 break;
             }
             
-            // DELETE CONTACT
+            //SEARCH CONTACT BY NAME
             case 3:
+            {
+                std::string input;
+                std::cout << "Please enter the query: ";
+                std::getline(std::cin, input);
+                std::cout<<std::endl;
+
+                std::vector<Contact*> found_contacts 
+                            = manager.searchContactsByName(input);
+
+                if(found_contacts.size() > 0)
+                {
+                    std::cout << "--- Found Contacts ---" << std::endl;
+                    for(const Contact* contact: found_contacts)
+                    {
+                        std::cout << contact->getName() << std::endl;
+                    }
+                }
+                else
+                {
+                    std::cout << "No Contacts Found" << std::endl;
+                }
+
+                std::cout << std::endl;
+                break;
+            }
+
+            // DELETE CONTACT
+            case 4:
             {
                 std::string number;
                 std::cout << "Please enter the number: ";
@@ -97,7 +126,7 @@ int main()
             }
 
             // SEARCH CONTACT
-            case 4:
+            case 5:
             {
                 std::string query;
                 int choice = 0;
@@ -167,7 +196,7 @@ int main()
             }
 
             // DISPLAY ALL CONTACTS
-            case 5:
+            case 6:
             {   
                 bool status = manager.displayAllContacts();
                 if(!status) 
@@ -190,7 +219,7 @@ int main()
             // }
 
             // SORTING THE CONTACTS
-            case 6: 
+            case 7: 
             {
                 bool status;
                 status = manager.sortAllContacts();
@@ -207,7 +236,7 @@ int main()
             }
 
             // LOADING CCONTACTS FROM FILE TO RUNTIME MEMORY
-            case 7: 
+            case 8: 
             {   bool status;
                 status = manager.loadFromFile();
 
