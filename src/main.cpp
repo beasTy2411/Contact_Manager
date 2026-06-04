@@ -92,12 +92,14 @@ int main()
                 std::vector<Contact*> found_contacts 
                             = manager.searchContactsByName(input);
 
-                if(found_contacts.size() > 0)
+                if(!found_contacts.empty())
                 {
                     std::cout << "--- Found Contacts ---" << std::endl;
                     for(const Contact* contact: found_contacts)
                     {
                         std::cout << contact->getName() << std::endl;
+                        std::cout << contact->getNumber() << std::endl;
+                        std::cout << contact->getEmail() << std::endl;
                     }
                 }
                 else

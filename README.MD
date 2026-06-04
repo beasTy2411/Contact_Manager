@@ -27,6 +27,14 @@ The final product aims to evolve from a simple CLI-based contact manager into a 
 
 ---
 
+## Enhancements Implemented
+- Case-insensitive contact search
+- Prefix-based name search
+- Multiple contact result support
+- Contact sorting using STL algorithms
+
+---
+
 ## Automatic Persistence Lifecycle
 - Automatic contact loading on startup
 - Automatic contact saving after:
@@ -63,6 +71,36 @@ Concepts Covered:
 - Lambda Expressions
 - Custom Comparators
 - Ordering Semantics
+
+---
+
+## Search System
+
+Implemented Features:
+
+- Search by phone number
+- Case-insensitive name search
+- Prefix-based matching
+- Multiple contact result support
+
+Examples:
+
+Query:
+ali
+
+Matches:
+- Alice
+- Alicia
+- Ali Khan
+
+Current Complexity:
+- O(n)
+
+Concepts Covered:
+- String normalization
+- Prefix matching
+- Collection filtering
+- Case-insensitive comparisons
 
 ---
 
@@ -201,16 +239,15 @@ CSV File
 # Upcoming Enhancements
 
 ## Phase 2 Enhancements
-- Better searching system
-- Search by partial name
-- Case-insensitive searching
 - Binary Search
 - Search optimization
+- Exact-name lookup optimization
+- Search indexing systems
 
 ## DSA Enhancements
-- Sorting algorithms
 - Binary Search
 - Hash-based indexing
+- Trie-based prefix search
 - Time complexity optimization
 
 ## Backend Enhancements
@@ -242,11 +279,17 @@ CSV File
 
 ## Complexity Analysis
 
-### Current Search Complexity
+### Current Number Search Complexity
 
-- Linear Search:
+Linear Search
 
-- O(n)
+O(n)
+
+### Current Name Search Complexity
+
+Case-Insensitive Prefix Search
+
+O(n)
 
 ### Current Delete Complexity
 
@@ -263,6 +306,7 @@ CSV File
 
 - Worst Case:
   O(n log n)
+
 
 ### Planned Optimization
 
@@ -310,13 +354,14 @@ ACTIVE DEVELOPMENT
 - Persistence Lifecycle Completed
 - Validation System Completed
 - Sorting System Completed
+- Advanced Name Search Completed
 
 ## Next Phase:
 Current Focus:
 Advanced Searching & DSA Optimizations
 
 Upcoming Features:
-- Contact Sorting
-- Advanced Search
 - Binary Search
+- Trie-based Prefix Search
 - Hash-based Indexing
+- Unit Testing Framework
