@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Projects/Core Dev/Contact_Manager/src/contact.cpp" "CMakeFiles/Contact_Manager.dir/src/contact.cpp.obj" "gcc" "CMakeFiles/Contact_Manager.dir/src/contact.cpp.obj.d"
   "D:/Projects/Core Dev/Contact_Manager/src/contact_manager.cpp" "CMakeFiles/Contact_Manager.dir/src/contact_manager.cpp.obj" "gcc" "CMakeFiles/Contact_Manager.dir/src/contact_manager.cpp.obj.d"
   "D:/Projects/Core Dev/Contact_Manager/src/main.cpp" "CMakeFiles/Contact_Manager.dir/src/main.cpp.obj" "gcc" "CMakeFiles/Contact_Manager.dir/src/main.cpp.obj.d"
+  "D:/Projects/Core Dev/Contact_Manager/src/ui.cpp" "CMakeFiles/Contact_Manager.dir/src/ui.cpp.obj" "gcc" "CMakeFiles/Contact_Manager.dir/src/ui.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

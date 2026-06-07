@@ -55,6 +55,29 @@ bool ContactManager::deleteContact(const std::string& number)
     return true;    
 }
 
+bool ContactManager::deleteContact(Contact* contact)
+{   
+    if(contact == nullptr)
+    {
+        return false;
+    }
+
+    std::vector<Contact>::iterator it;
+    for(it = contacts.begin(); it != contacts.end(); ++it)
+    {
+        if(&(*it) == contact)
+        {
+            break;
+        }
+    }
+
+    if(it == contacts.end()) return false;
+
+    contacts.erase(it);
+    saveToFile();
+    return true;
+}
+
 
 bool ContactManager::editContact(const int& choice, const std::string& data, Contact* contact)
 {
@@ -91,6 +114,7 @@ bool ContactManager::editContact(const int& choice, const std::string& data, Con
             break;
     }
 }
+
 
 bool ContactManager::displayAllContacts() const
 {   
@@ -171,11 +195,11 @@ bool ContactManager::loadFromFile()
             contacts.push_back(contact);
         }   
 
-        #if DEBUG
-        std::cout << "Name: " << row[0] << std::endl;
-        std::cout << "Number: " << row[1] << std::endl;
-        std::cout << "Email: " << row[2] << std::endl;
-        #endif
+        // #if DEBUG
+        // std::cout << "Name: " << row[0] << std::endl;
+        // std::cout << "Number: " << row[1] << std::endl;
+        // std::cout << "Email: " << row[2] << std::endl;
+        // #endif
         
     }
 

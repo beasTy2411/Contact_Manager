@@ -29,6 +29,10 @@ class ContactManager
             RETURN BOOL VALUE BASED ON OPERATION STATUS*/
         bool deleteContact(const std::string& number);
 
+        /* DELETE FUNCTION OVERLOAD USING ARGUMENT POINTER TO A CONTACT
+            RETURNS BOOL VALUE BASED ON OPERATION STATUS*/
+        bool deleteContact(Contact* contact);
+
         /* EDIT THE INFORMATION OF AN EXISTING CONTACT IN THE VECTOR
             RETURN BOOL VALUE BASED ON OPERATION STATUS*/
         bool editContact(const int& choice, const std::string& data, Contact* contact);

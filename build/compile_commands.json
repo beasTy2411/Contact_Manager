@@ -16,5 +16,11 @@
   "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager.dir\\src\\contact_manager.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\src\\contact_manager.cpp\"",
   "file": "D:/Projects/Core Dev/Contact_Manager/src/contact_manager.cpp",
   "output": "CMakeFiles/Contact_Manager.dir/src/contact_manager.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager.dir\\src\\ui.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\src\\ui.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/src/ui.cpp",
+  "output": "CMakeFiles/Contact_Manager.dir/src/ui.cpp.obj"
 }
 ]

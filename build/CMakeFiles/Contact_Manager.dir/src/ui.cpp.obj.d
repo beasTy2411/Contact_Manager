@@ -1,5 +1,5 @@
-CMakeFiles/Contact_Manager.dir/src/main.cpp.obj: \
- D:\Projects\Core\ Dev\Contact_Manager\src\main.cpp \
+CMakeFiles/Contact_Manager.dir/src/ui.cpp.obj: \
+ D:\Projects\Core\ Dev\Contact_Manager\src\ui.cpp \
  D:/Projects/Core\ Dev/Contact_Manager/includes/ui.h \
  D:/Projects/Core\ Dev/Contact_Manager/includes/contact.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string \

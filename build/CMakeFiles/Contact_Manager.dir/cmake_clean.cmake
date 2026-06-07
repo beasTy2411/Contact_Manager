@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Contact_Manager.dir/src/contact_manager.cpp.obj.d"
   "CMakeFiles/Contact_Manager.dir/src/main.cpp.obj"
   "CMakeFiles/Contact_Manager.dir/src/main.cpp.obj.d"
+  "CMakeFiles/Contact_Manager.dir/src/ui.cpp.obj"
+  "CMakeFiles/Contact_Manager.dir/src/ui.cpp.obj.d"
   "Contact_Manager.exe"
   "Contact_Manager.exe.manifest"
   "Contact_Manager.pdb"
