@@ -8,7 +8,7 @@ add_executable(Contact_Manager
     src/main.cpp
     src/contact.cpp
     src/contact_manager.cpp
-    src/ui.cpp
+    src/main_utility.cpp
 )
 
 target_include_directories(Contact_Manager PRIVATE includes)

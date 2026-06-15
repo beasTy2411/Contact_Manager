@@ -1,4 +1,4 @@
-#include "ui.h"
+#include "main_utility.h"
 
 #include <iostream>
 #include <limits>
@@ -40,3 +40,4 @@ Contact* selectContactByName(ContactManager& manager)
 
                 return found_contacts[choice - 1];
 }
+

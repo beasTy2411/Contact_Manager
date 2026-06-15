@@ -1,12 +1,11 @@
 // CLASS CONTACT MANAGER IMPLEMENTATION
 #include "contact_manager.h"
+#include "other_utility.h"
 
 #include <iostream>
 #include <algorithm>
 #include <fstream>
 #include <sstream>
-#include <cctype>
-#include <string>
 
 #define DEBUG 0
 
@@ -17,7 +16,7 @@ ContactManager::ContactManager()
 
 bool ContactManager::addContact(const Contact& contact)
 {   
-    if(searchContact(contact.getNumber()))
+    if(searchContactbyNumber(contact.getNumber()))
     {
        return false;
     } 
@@ -27,7 +26,7 @@ bool ContactManager::addContact(const Contact& contact)
     return true;
 }
 
-Contact* ContactManager::searchContact(const std::string& query)
+Contact* ContactManager::searchContactbyNumber(const std::string& query)
 {
     for(Contact& contact : contacts)
     {
@@ -91,7 +90,7 @@ bool ContactManager::editContact(const int& choice, const std::string& data, Con
         }
         case 2:
         {   
-            Contact *sContact = searchContact(data);
+            Contact *sContact = searchContactbyNumber(data);
             if(sContact != nullptr && sContact != contact) 
             {   
                 return false;
@@ -135,8 +134,14 @@ bool ContactManager::displayAllContacts() const
 bool ContactManager::sortAllContacts()
 {
     std::sort(contacts.begin(), contacts.end(),
-             [](const Contact& a, const Contact& b)
-             {return a.getName() < b.getName();}
+             [](Contact& a, Contact& b)
+             {  
+                std::string name1 = a.getName();
+                std::string name2 = b.getName();
+                toLowerCase(name1);
+                toLowerCase(name2);
+                return name1 < name2;
+             }
             );
     if(!saveToFile())
     {
@@ -209,30 +214,17 @@ bool ContactManager::loadFromFile()
 
 std::vector<Contact*> ContactManager::searchContactsByName(const std::string &query)
 {   
-    std::vector<Contact*> found_contacts;
-
-    std::string lowercase_query = query;
-    toLowerCase(lowercase_query);
-
-    for(Contact &contact : contacts)
-    {
-        std::string lowercase_contact_name = contact.getName();
-        toLowerCase(lowercase_contact_name);
-
-        if(lowercase_contact_name.compare(0, lowercase_query.length(), lowercase_query) == 0)
-        {
-            found_contacts.push_back(&contact);
-        }
-    }
-
-    return found_contacts;
+    int start_index = 0;
+    return linearSearchByName(start_index, query, contacts);
 }
 
-void ContactManager::toLowerCase(std::string& query)
+std::vector<Contact*> ContactManager::binarySearchContactsByName(const std::string& query)
 {
-    for(char &c: query)
-    {
-        c = static_cast<char>(std::tolower(static_cast<unsigned char> (c)));
-    }
+    int index = -1;
+    index = binarySearch(query, 0, contacts.size() - 1, contacts);
+    
+    if(index == -1)
+        return {};
 
+    return linearSearchByName(index, query, contacts);
 }

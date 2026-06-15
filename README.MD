@@ -32,6 +32,9 @@ The final product aims to evolve from a simple CLI-based contact manager into a 
 - Prefix-based name search
 - Multiple contact result support
 - Contact sorting using STL algorithms
+- Case-insensitive contact sorting
+- Binary-search-assisted prefix search
+- Search result region optimization
 
 ---
 
@@ -59,9 +62,10 @@ The final product aims to evolve from a simple CLI-based contact manager into a 
 
 - Contact sorting using STL `std::sort`
 - Lambda-based comparator implementation
-- Alphabetical sorting by contact name
+- Case-insensitive alphabetical sorting by contact name
 - Permanent storage ordering
 - Automatic persistence after sorting
+- Consistent comparison policy across sorting and searching
 
 Current Complexity:
 - O(n log n)
@@ -70,11 +74,56 @@ Concepts Covered:
 - STL Algorithms
 - Lambda Expressions
 - Custom Comparators
-- Ordering Semantics
+- Case-insensitive Ordering
+- Search Invariants
 
 ---
 
 ## Search System
+
+Implemented Features:
+
+- Search by phone number
+- Case-insensitive name search
+- Prefix-based matching
+- Multiple contact result support
+- Contact selection from search results
+- Binary-search-assisted prefix lookup
+- First-occurrence search optimization
+
+Search Strategy:
+
+1. Binary search locates the first matching prefix occurrence.
+2. A targeted linear scan traverses only the matching region.
+3. Search terminates at the first mismatch after the matching region.
+
+Examples:
+
+Query:
+ali
+
+Matches:
+- Alice
+- Alicia
+- Ali Khan
+
+Query:
+deep
+
+Matches:
+- Deepak Sharma
+- Deepak Kumar
+- Deepak Singh
+
+Concepts Covered:
+
+- String normalization
+- Prefix matching
+- Binary search
+- Recursive algorithms
+- Search space reduction
+- Region-based scanning
+- Case-insensitive comparisons
 
 Implemented Features:
 
@@ -143,6 +192,35 @@ Concepts Covered:
 
 ---
 
+## Data Structures & Algorithms
+
+### Data Structures
+- std::vector
+- Dynamic Array Operations
+- Sequential Storage
+
+### Algorithms
+- Linear Search
+- Recursive Binary Search
+- Prefix-Based Searching
+- STL Introsort (`std::sort`)
+- First Occurrence Search
+- Region-Based Scanning
+
+### Complexity Analysis
+- O(n) Linear Search
+- O(log n + k) Binary Search + Region Scan
+- O(n log n) Sorting
+
+Concepts Covered:
+- Search Space Reduction
+- Time Complexity Analysis
+- Case-Insensitive Comparisons
+- Algorithmic Optimization
+- Recursive Problem Solving
+
+---
+
 ## File Handling
 - `std::ifstream`
 - `std::ofstream`
@@ -168,6 +246,9 @@ Concepts Covered:
 - Automatic persistence lifecycle
 - Data synchronization
 - State mutation management
+- Consistent comparison policies
+- Utility-based code reuse
+- Search optimization strategies
 
 ---
 
@@ -208,11 +289,14 @@ Contact_Manager/
 ├── data/
 ├── includes/
 │   ├── contact.h
-│   └── contact_manager.h
+|   ├── contact_manager.h
+|   ├── main_utility.h
+|   └── other_utility.h
 ├── src/
 │   ├── contact.cpp
 │   ├── contact_manager.cpp
-│   └── main.cpp
+|   ├── main.cpp
+│   └── main_utility.cpp
 ├── tests/
 ├── CMakeLists.txt
 └── README.md
@@ -293,9 +377,27 @@ O(n)
 
 ### Current Name Search Complexity
 
-Case-Insensitive Prefix Search
+Binary Search + Region Scan
 
+Search Phase:
+- O(log n)
+
+Result Collection Phase:
+- O(k)
+
+Where:
+- n = total contacts
+- k = matching contacts
+
+Overall:
+
+O(log n + k)
+
+Worst Case:
 O(n)
+
+Best Case:
+O(log n)
 
 ### Current Delete Complexity
 
@@ -323,6 +425,26 @@ Using hash-based indexing:
 - O(1)
 
 --- 
+
+# Search Evolution
+
+The search system has been developed incrementally to demonstrate algorithmic improvements and real-world optimization techniques.
+
+Version 1:
+- Linear case-insensitive prefix search
+- O(n)
+
+Version 2:
+- Case-insensitive sorting
+- Recursive binary search to locate the first matching occurrence
+- Region-based linear scan of matching contacts
+- O(log n + k)
+
+Future Versions:
+- Hash-map indexing for direct lookups
+- Trie-based prefix searching
+
+---
 
 # Final Goal
 
@@ -359,18 +481,19 @@ ACTIVE DEVELOPMENT
 - Backend CRUD System Completed
 - Persistence Lifecycle Completed
 - Validation System Completed
-- Sorting System Completed
-- Advanced Name Search Completed
 - Edit By Name Completed
 - Delete By Name Completed
-- UI Helper Refactoring Started
+- Advanced Name Search Completed
+- Binary Search Optimization Completed
+- Case-Insensitive Sorting Completed
+- Search Utility Refactoring Completed
 
 ## Next Phase:
 Current Focus:
 Advanced Searching & DSA Optimizations
 
 Upcoming Features:
-- Binary Search
-- Trie-based Prefix Search
 - Hash-based Indexing
+- Trie-based Prefix Search
 - Unit Testing Framework
+- Additional Search Optimizations

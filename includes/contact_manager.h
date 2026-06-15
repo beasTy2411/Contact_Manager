@@ -23,7 +23,7 @@ class ContactManager
 
         /* SEARCH CONTACT FROM THE VECTOR
             RETURNS A POINTER TO THE SEARCHED CONTACT*/ 
-        Contact* searchContact(const std::string& query);
+        Contact* searchContactbyNumber(const std::string& query);
 
         /* DELETE CONTACT FROM THE VECTOR
             RETURN BOOL VALUE BASED ON OPERATION STATUS*/
@@ -60,8 +60,9 @@ class ContactManager
             RETURN A VECTOR OF FOUND CONTACT WHICH CONTAINS THE QUERIED SUBSTRING */
         std::vector<Contact*> searchContactsByName(const std::string &query);
 
-        /* HELPER FUNCTION FOR SEARCH CONTACTS BY NAME
-            IT CONVERTS THE INPUT TO LOWERCASE AND RETURNS THE STRING*/
-        void toLowerCase(std::string& query);
+        /* BINARY SEARCH CONTACTS BY NAME
+            UPGRADED VERSION OF SEARCHCONTACTSBYNAME BY IMPLEMENTING BINARY SEARCH
+            RETURNS A VECTOR OF FOUND CONTACT WHICH MATCH THE QUERIED SUBSTRING*/
+        std::vector<Contact*> binarySearchContactsByName(const std::string& query);
 };
 

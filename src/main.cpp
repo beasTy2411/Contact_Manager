@@ -1,8 +1,9 @@
-#include "ui.h"
+#include "main_utility.h"
 
 #include <iostream>
 #include <ios>
 #include <limits>
+#include <chrono>
 
 int main()
 {   
@@ -72,7 +73,7 @@ int main()
                 std::getline(std::cin, query);
                 std::cout << std::endl;
 
-                Contact *contact = manager.searchContact(query);
+                Contact *contact = manager.searchContactbyNumber(query);
                 if(contact != nullptr)
                 {
                     std::cout << "Contact Found: \n";
@@ -87,15 +88,15 @@ int main()
             
             //SEARCH CONTACT BY NAME
             case 3:
-            {
+            {  
                 std::string input;
                 std::cout << "Please enter the query: ";
                 std::getline(std::cin, input);
                 std::cout<<std::endl;
-
+                
                 std::vector<Contact*> found_contacts 
-                            = manager.searchContactsByName(input);
-
+                            = manager.binarySearchContactsByName(input);
+                            
                 if(!found_contacts.empty())
                 {
                     std::cout << "--- Found Contacts ---" << std::endl;
@@ -212,6 +213,7 @@ int main()
                 else{
                     std::cout << "Please enter correct choice" << std::endl;
                 }
+                manager.sortAllContacts();
                 break;
             }
 

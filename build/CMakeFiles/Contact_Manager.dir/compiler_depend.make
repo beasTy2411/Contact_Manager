@@ -111,6 +111,7 @@ CMakeFiles/Contact_Manager.dir/src/contact.cpp.obj: D:/Projects/Core\ Dev/Contac
 CMakeFiles/Contact_Manager.dir/src/contact_manager.cpp.obj: D:/Projects/Core\ Dev/Contact_Manager/src/contact_manager.cpp \
   D:/Projects/Core\ Dev/Contact_Manager/includes/contact.h \
   D:/Projects/Core\ Dev/Contact_Manager/includes/contact_manager.h \
+  D:/Projects/Core\ Dev/Contact_Manager/includes/other_utility.h \
   c:/mingw/include/_mingw.h \
   c:/mingw/include/ctype.h \
   c:/mingw/include/direct.h \
@@ -241,7 +242,7 @@ CMakeFiles/Contact_Manager.dir/src/contact_manager.cpp.obj: D:/Projects/Core\ De
 CMakeFiles/Contact_Manager.dir/src/main.cpp.obj: D:/Projects/Core\ Dev/Contact_Manager/src/main.cpp \
   D:/Projects/Core\ Dev/Contact_Manager/includes/contact.h \
   D:/Projects/Core\ Dev/Contact_Manager/includes/contact_manager.h \
-  D:/Projects/Core\ Dev/Contact_Manager/includes/ui.h \
+  D:/Projects/Core\ Dev/Contact_Manager/includes/main_utility.h \
   c:/mingw/include/_mingw.h \
   c:/mingw/include/ctype.h \
   c:/mingw/include/direct.h \
@@ -290,6 +291,7 @@ CMakeFiles/Contact_Manager.dir/src/main.cpp.obj: D:/Projects/Core\ Dev/Contact_M
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/nested_exception.h \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/ostream.tcc \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/ostream_insert.h \
+  c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/parse_numbers.h \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/postypes.h \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/predefined_ops.h \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/ptr_traits.h \
@@ -310,10 +312,12 @@ CMakeFiles/Contact_Manager.dir/src/main.cpp.obj: D:/Projects/Core\ Dev/Contact_M
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/vector.tcc \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/cctype \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/cerrno \
+  c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/chrono \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/clocale \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/cstdint \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/cstdio \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/cstdlib \
+  c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/ctime \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/cwchar \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/cwctype \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/debug/assertions.h \
@@ -344,6 +348,7 @@ CMakeFiles/Contact_Manager.dir/src/main.cpp.obj: D:/Projects/Core\ Dev/Contact_M
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/os_defines.h \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/new \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/ostream \
+  c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/ratio \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/stdexcept \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/streambuf \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/string \
@@ -354,10 +359,10 @@ CMakeFiles/Contact_Manager.dir/src/main.cpp.obj: D:/Projects/Core\ Dev/Contact_M
   c:/mingw/lib/gcc/mingw32/6.3.0/include/stddef.h \
   c:/mingw/lib/gcc/mingw32/6.3.0/include/stdint.h
 
-CMakeFiles/Contact_Manager.dir/src/ui.cpp.obj: D:/Projects/Core\ Dev/Contact_Manager/src/ui.cpp \
+CMakeFiles/Contact_Manager.dir/src/main_utility.cpp.obj: D:/Projects/Core\ Dev/Contact_Manager/src/main_utility.cpp \
   D:/Projects/Core\ Dev/Contact_Manager/includes/contact.h \
   D:/Projects/Core\ Dev/Contact_Manager/includes/contact_manager.h \
-  D:/Projects/Core\ Dev/Contact_Manager/includes/ui.h \
+  D:/Projects/Core\ Dev/Contact_Manager/includes/main_utility.h \
   c:/mingw/include/_mingw.h \
   c:/mingw/include/ctype.h \
   c:/mingw/include/direct.h \
@@ -663,6 +668,8 @@ c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++locale.h:
 
 c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/cpu_defines.h:
 
+D:/Projects/Core\ Dev/Contact_Manager/includes/main_utility.h:
+
 c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/utility:
 
 c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/ctype_inline.h:
@@ -692,6 +699,8 @@ c:/mingw/lib/gcc/mingw32/6.3.0/include/stdint.h:
 D:/Projects/Core\ Dev/Contact_Manager/src/contact_manager.cpp:
 
 D:/Projects/Core\ Dev/Contact_Manager/includes/contact_manager.h:
+
+D:/Projects/Core\ Dev/Contact_Manager/includes/other_utility.h:
 
 c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/algorithmfwd.h:
 
@@ -731,6 +740,12 @@ c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/vector:
 
 D:/Projects/Core\ Dev/Contact_Manager/src/main.cpp:
 
-D:/Projects/Core\ Dev/Contact_Manager/includes/ui.h:
+c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/parse_numbers.h:
 
-D:/Projects/Core\ Dev/Contact_Manager/src/ui.cpp:
+c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/chrono:
+
+c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/ctime:
+
+c:/mingw/lib/gcc/mingw32/6.3.0/include/c++/ratio:
+
+D:/Projects/Core\ Dev/Contact_Manager/src/main_utility.cpp:

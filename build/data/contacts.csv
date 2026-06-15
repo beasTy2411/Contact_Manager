@@ -1,12 +1,51 @@
-ALICE,4157,asd
-Alice,9849654,asdlkasd
-Alice,351315,asd da as
-Anuj,852,ar
-Garry,1235,gr
-Gaurav,456,gs
-Nanny,9586,nn
-Navneet,123,nv
-Pooja,741,pr
-Posh,7586,pos
-Prem,789,pc
-zom,6584321,asdasfag
+Name,Phone,Email
+Alice Johnson,9876500001,alice.johnson@email.com
+Bob Smith,9876500002,bob.smith@email.com
+Charlie Brown,9876500003,charlie.brown@email.com
+David Wilson,9876500004,david.wilson@email.com
+Emma Davis,9876500005,emma.davis@email.com
+Frank Miller,9876500006,frank.miller@email.com
+Grace Lee,9876500007,grace.lee@email.com
+Henry Taylor,9876500008,henry.taylor@email.com
+Isabella Moore,9876500009,isabella.moore@email.com
+Jack White,9876500010,jack.white@email.com
+Kevin Thomas,9876500011,kevin.thomas@email.com
+Liam Harris,9876500012,liam.harris@email.com
+Mia Martin,9876500013,mia.martin@email.com
+Noah Thompson,9876500014,noah.thompson@email.com
+Olivia Garcia,9876500015,olivia.garcia@email.com
+Peter Anderson,9876500016,peter.anderson@email.com
+Quinn Martinez,9876500017,quinn.martinez@email.com
+Ryan Clark,9876500018,ryan.clark@email.com
+Sophia Lewis,9876500019,sophia.lewis@email.com
+Thomas Walker,9876500020,thomas.walker@email.com
+Uma Hall,9876500021,uma.hall@email.com
+Victoria Allen,9876500022,victoria.allen@email.com
+William Young,9876500023,william.young@email.com
+Xavier King,9876500024,xavier.king@email.com
+Yara Wright,9876500025,yara.wright@email.com
+Zoe Scott,9876500026,zoe.scott@email.com
+Deepak Sharma,9876500027,deepak.sharma@email.com
+Deepak Kumar,9876500028,deepak.kumar@email.com
+Deepak Singh,9876500029,deepak.singh@email.com
+deepak Verma,9876500030,deepak.verma@email.com
+DEEPAK Mishra,9876500031,deepak.mishra@email.com
+Dev Mehta,9876500032,dev.mehta@email.com
+Deven Patel,9876500033,deven.patel@email.com
+Devansh Gupta,9876500034,devansh.gupta@email.com
+Dhanush Rao,9876500035,dhanush.rao@email.com
+Dhruv Kapoor,9876500036,dhruv.kapoor@email.com
+Dhruv Sharma,9876500037,dhruv.sharma@email.com
+Ananya Singh,9876500038,ananya.singh@email.com
+Arjun Gupta,9876500039,arjun.gupta@email.com
+Aditi Sharma,9876500040,aditi.sharma@email.com
+Rohan Mehta,9876500041,rohan.mehta@email.com
+Rohit Kumar,9876500042,rohit.kumar@email.com
+Riya Verma,9876500043,riya.verma@email.com
+Sakshi Jain,9876500044,sakshi.jain@email.com
+Sanjay Patel,9876500045,sanjay.patel@email.com
+Shreya Gupta,9876500046,shreya.gupta@email.com
+Vikas Sharma,9876500047,vikas.sharma@email.com
+Vivek Singh,9876500048,vivek.singh@email.com
+Yash Malhotra,9876500049,yash.malhotra@email.com
+Zain Khan,9876500050,zain.khan@email.com
