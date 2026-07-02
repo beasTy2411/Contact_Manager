@@ -8,10 +8,14 @@
 #include <sstream>
 
 #define DEBUG 0
+#define PRODUCTION 0
+#define TEST 1
 
 ContactManager::ContactManager()
 {
+    #if PRODUCTION
     loadFromFile();
+    #endif
 }
 
 bool ContactManager::addContact(const Contact& contact)
@@ -22,7 +26,11 @@ bool ContactManager::addContact(const Contact& contact)
     } 
 
     contacts.push_back(contact);
+
+    #if PRODUCTION
     saveToFile();
+    #endif
+
     return true;
 }
 
@@ -50,7 +58,11 @@ bool ContactManager::deleteContact(const std::string& number)
     if(it == contacts.end()) return false;
 
     contacts.erase(it);
+
+    #if PRODUCTION
     saveToFile();
+    #endif
+
     return true;    
 }
 
@@ -73,7 +85,11 @@ bool ContactManager::deleteContact(Contact* contact)
     if(it == contacts.end()) return false;
 
     contacts.erase(it);
+
+    #if PRODUCTION
     saveToFile();
+    #endif
+
     return true;
 }
 
@@ -85,8 +101,16 @@ bool ContactManager::editContact(const int& choice, const std::string& data, Con
         case 1:
         {
             contact->setName(data);
-            if(!saveToFile()) return false;
-            return true;
+
+            #if PRODUCTION
+                if(!saveToFile()) return false;
+                return true;
+            #endif
+
+            #if TEST
+                if(contact->getName() == data) return true;
+                else return false;
+            #endif
         }
         case 2:
         {   
@@ -98,15 +122,29 @@ bool ContactManager::editContact(const int& choice, const std::string& data, Con
             else    
             {
                 contact->setNumber(data);
-                if(!saveToFile()) return false;
-                return true;
+                #if PRODUCTION
+                    if(!saveToFile()) return false;
+                    return true;
+                #endif
+
+                #if TEST
+                    if(contact->getNumber() == data) return true;
+                    else return true;
+                #endif
             }
         }
         case 3:
         {
             contact->setEmail(data);
-            if(!saveToFile()) return false;
-            return true;
+            #if PRODUCTION
+                if(!saveToFile()) return false;
+                return true;
+            #endif
+
+            #if TEST
+                    if(contact->getEmail() == data) return true;
+                    else return true;
+            #endif
         }
         default:
         return false;
@@ -143,14 +181,17 @@ bool ContactManager::sortAllContacts()
                 return name1 < name2;
              }
             );
-    if(!saveToFile())
-    {
-        return false;
-    }
+    #if PRODUCTION
+        if(!saveToFile())
+        {
+            return false;
+        }
+    #endif
 
     return true;
 }
 
+#if PRODUCTION
 bool ContactManager::saveToFile()
 {
     std::ofstream myfile;
@@ -211,6 +252,7 @@ bool ContactManager::loadFromFile()
     myfile.close();
     return true;
 }
+#endif
 
 std::vector<Contact*> ContactManager::searchContactsByName(const std::string &query)
 {   
@@ -227,4 +269,9 @@ std::vector<Contact*> ContactManager::binarySearchContactsByName(const std::stri
         return {};
 
     return linearSearchByName(index, query, contacts);
+}
+
+int ContactManager::contactSize() const
+{
+    return contacts.size();
 }

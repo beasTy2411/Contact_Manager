@@ -125,33 +125,6 @@ Concepts Covered:
 - Region-based scanning
 - Case-insensitive comparisons
 
-Implemented Features:
-
-- Search by phone number
-- Case-insensitive name search
-- Prefix-based matching
-- Multiple contact result support
-- Contact selection from search results
-
-Examples:
-
-Query:
-ali
-
-Matches:
-- Alice
-- Alicia
-- Ali Khan
-
-Current Complexity:
-- O(n)
-
-Concepts Covered:
-- String normalization
-- Prefix matching
-- Collection filtering
-- Case-insensitive comparisons
-
 ---
 
 ## Backend Architecture
@@ -168,6 +141,32 @@ Concepts Covered:
 - CMake integration
 - Multi-file compilation
 - VSCode + MinGW workflow setup
+
+---
+
+## Testing Infrastructure
+
+The project includes a custom unit testing suite built from scratch to better understand software testing concepts without relying on external frameworks.
+
+Current testing features include:
+
+- Modular test organization
+- Reusable named test datasets
+- Shared test helper utilities
+- Independent behavioral unit tests
+- Search functionality test coverage
+
+Current reusable datasets:
+
+- StandardContacts
+- DuplicateNameContacts
+- PrefixContacts
+
+Future work:
+
+- Custom assertion framework
+- Test runner improvements
+- Regression test suite
 
 ---
 
@@ -262,6 +261,9 @@ Concepts Covered:
 - Code reuse through helper functions
 - UI workflow abstraction
 - DRY (Don't Repeat Yourself) principle
+- Reusable test data organization
+- Test utility abstraction
+- Incremental testing infrastructure
 
 ---
 
@@ -298,6 +300,14 @@ Contact_Manager/
 |   ├── main.cpp
 │   └── main_utility.cpp
 ├── tests/
+    ├── test_data.h
+    ├── test_data.cpp
+    ├── helpers.h
+    ├── helpers.cpp
+    ├── contact_tests.h
+    ├── contact_tests.cpp
+    ├── search_tests.h
+    └── search_tests.cpp
 ├── CMakeLists.txt
 └── README.md
 ```
@@ -329,13 +339,11 @@ CSV File
 # Upcoming Enhancements
 
 ## Phase 2 Enhancements
-- Binary Search
 - Search optimization
 - Exact-name lookup optimization
 - Search indexing systems
 
 ## DSA Enhancements
-- Binary Search
 - Hash-based indexing
 - Trie-based prefix search
 - Time complexity optimization
@@ -359,11 +367,10 @@ CSV File
 - Possible web frontend in future
 
 ## Testing Roadmap
-
-- Manual Feature Testing
-- Unit Testing
+- Custom Assertion Framework
 - Edge Case Validation
 - Regression Testing
+- Performance Testing
 
 ---
 
@@ -487,13 +494,15 @@ ACTIVE DEVELOPMENT
 - Binary Search Optimization Completed
 - Case-Insensitive Sorting Completed
 - Search Utility Refactoring Completed
+- Unit Testing Infrastructure Completed
+- Custom Assertion Framework In Progress
 
 ## Next Phase:
 Current Focus:
-Advanced Searching & DSA Optimizations
+Testing infrastructure and search validation
 
 Upcoming Features:
 - Hash-based Indexing
 - Trie-based Prefix Search
-- Unit Testing Framework
+- Custom Test Framework
 - Additional Search Optimizations

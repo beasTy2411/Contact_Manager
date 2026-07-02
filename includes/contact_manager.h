@@ -57,6 +57,7 @@ class ContactManager
         bool loadFromFile();
 
         /* SEARCH CONTACTS BY NAME 
+            USES LINEAR SEARCH METHOD TO FIND THE CONTACT
             RETURN A VECTOR OF FOUND CONTACT WHICH CONTAINS THE QUERIED SUBSTRING */
         std::vector<Contact*> searchContactsByName(const std::string &query);
 
@@ -64,5 +65,9 @@ class ContactManager
             UPGRADED VERSION OF SEARCHCONTACTSBYNAME BY IMPLEMENTING BINARY SEARCH
             RETURNS A VECTOR OF FOUND CONTACT WHICH MATCH THE QUERIED SUBSTRING*/
         std::vector<Contact*> binarySearchContactsByName(const std::string& query);
+
+        /* THIS IS A HELPER FUNCTION WHICH RETURNS THE SIZE OF THE VECTOR
+            SPECIFICALLY USED FOR TESTING PURPOSE*/
+        int contactSize() const;
 };
 
