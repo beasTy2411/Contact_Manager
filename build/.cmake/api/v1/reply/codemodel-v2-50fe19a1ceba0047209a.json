@@ -16,7 +16,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -31,7 +32,8 @@
 					"name" : "Contact_Manager",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -40,8 +42,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Contact_Manager_Prod::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Contact_Manager_Prod-Debug-8e3f84f5460f83be47ec.json",
+					"jsonFile" : "target-Contact_Manager_Prod-Debug-bac698d016a26880f965.json",
 					"name" : "Contact_Manager_Prod",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Contact_Manager_Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Contact_Manager_Test-Debug-e09a804b938fe4c752b1.json",
+					"name" : "Contact_Manager_Test",
 					"projectIndex" : 0
 				}
 			]

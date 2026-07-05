@@ -17,6 +17,7 @@ const std::vector<Contact> DuplicateNamesContacts = {
 const std::vector<Contact> PrefixContacts = {
     Contact("Alice", "123456789", "alice@gmail.com"),
     Contact ("Albert", "234567891", "albert@gmail.com"),
+    Contact("Alina", "567891234", "alina@gmail.com"),
     Contact ("Athena", "345678912", "athena@gmail.com"),
     Contact ("Dave", "456789123", "dave@gmail.com")
 };

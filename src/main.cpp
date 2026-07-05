@@ -257,7 +257,7 @@ int main()
                 break;
             }
 
-            // LOADING CCONTACTS FROM FILE TO RUNTIME MEMORY
+            // LOADING CONTACTS FROM FILE TO RUNTIME MEMORY
             case 9: 
             {   bool status;
                 status = manager.loadFromFile();

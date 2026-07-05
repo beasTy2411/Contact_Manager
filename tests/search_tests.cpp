@@ -54,6 +54,15 @@ bool testLinearSingleContactFound()
     return not_empty && is_charlie;
 }
 
+bool testLinearMultiplePrefixMatches()
+{
+    ContactManager manager = populateManager(PrefixContacts);
+    std::vector<Contact*> found_contact = manager.searchContactsByName("Al");
+    bool not_empty = found_contact.size() > 0 ? true : false;
+
+    return not_empty;
+}
+
 bool testLinearCaseInsensitive()
 {   
     ContactManager manager = populateManager(StandardContacts);

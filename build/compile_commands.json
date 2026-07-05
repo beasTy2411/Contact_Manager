@@ -25,8 +25,56 @@
 },
 {
   "directory": "D:/Projects/Core Dev/Contact_Manager/build",
-  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Prod.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Prod.dir\\tests\\test_data.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\tests\\test_data.cpp\"",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\src\\contact.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\src\\contact.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/src/contact.cpp",
+  "output": "CMakeFiles/Contact_Manager_Test.dir/src/contact.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\src\\contact_manager.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\src\\contact_manager.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/src/contact_manager.cpp",
+  "output": "CMakeFiles/Contact_Manager_Test.dir/src/contact_manager.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\src\\main_utility.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\src\\main_utility.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/src/main_utility.cpp",
+  "output": "CMakeFiles/Contact_Manager_Test.dir/src/main_utility.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\tests\\test_main.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\tests\\test_main.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/tests/test_main.cpp",
+  "output": "CMakeFiles/Contact_Manager_Test.dir/tests/test_main.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\tests\\test_runner.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\tests\\test_runner.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/tests/test_runner.cpp",
+  "output": "CMakeFiles/Contact_Manager_Test.dir/tests/test_runner.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\tests\\contact_tests.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\tests\\contact_tests.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/tests/contact_tests.cpp",
+  "output": "CMakeFiles/Contact_Manager_Test.dir/tests/contact_tests.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\tests\\helpers.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\tests\\helpers.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/tests/helpers.cpp",
+  "output": "CMakeFiles/Contact_Manager_Test.dir/tests/helpers.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\tests\\search_tests.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\tests\\search_tests.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/tests/search_tests.cpp",
+  "output": "CMakeFiles/Contact_Manager_Test.dir/tests/search_tests.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\tests\\test_data.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\tests\\test_data.cpp\"",
   "file": "D:/Projects/Core Dev/Contact_Manager/tests/test_data.cpp",
-  "output": "CMakeFiles/Contact_Manager_Prod.dir/tests/test_data.cpp.obj"
+  "output": "CMakeFiles/Contact_Manager_Test.dir/tests/test_data.cpp.obj"
 }
 ]

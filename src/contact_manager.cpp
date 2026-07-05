@@ -8,14 +8,11 @@
 #include <sstream>
 
 #define DEBUG 0
-#define PRODUCTION 0
 #define TEST 1
 
 ContactManager::ContactManager()
 {
-    #if PRODUCTION
     loadFromFile();
-    #endif
 }
 
 bool ContactManager::addContact(const Contact& contact)
@@ -27,9 +24,7 @@ bool ContactManager::addContact(const Contact& contact)
 
     contacts.push_back(contact);
 
-    #if PRODUCTION
     saveToFile();
-    #endif
 
     return true;
 }
@@ -59,9 +54,7 @@ bool ContactManager::deleteContact(const std::string& number)
 
     contacts.erase(it);
 
-    #if PRODUCTION
     saveToFile();
-    #endif
 
     return true;    
 }
@@ -86,10 +79,7 @@ bool ContactManager::deleteContact(Contact* contact)
 
     contacts.erase(it);
 
-    #if PRODUCTION
     saveToFile();
-    #endif
-
     return true;
 }
 
@@ -181,19 +171,21 @@ bool ContactManager::sortAllContacts()
                 return name1 < name2;
              }
             );
-    #if PRODUCTION
         if(!saveToFile())
         {
             return false;
         }
-    #endif
 
     return true;
 }
 
-#if PRODUCTION
+
 bool ContactManager::saveToFile()
 {
+    #if TEST
+        return true;
+    #endif
+
     std::ofstream myfile;
     myfile.open("data/contacts.csv", std::ios::trunc);
 
@@ -213,7 +205,11 @@ bool ContactManager::saveToFile()
 }
 
 bool ContactManager::loadFromFile()
-{
+{   
+    #if TEST
+        return true;
+    #endif
+
     std::ifstream myfile;
     myfile.open("data/contacts.csv");
 
@@ -239,20 +235,12 @@ bool ContactManager::loadFromFile()
         {
             Contact contact(row[0], row[1], row[2]); 
             contacts.push_back(contact);
-        }   
-
-        // #if DEBUG
-        // std::cout << "Name: " << row[0] << std::endl;
-        // std::cout << "Number: " << row[1] << std::endl;
-        // std::cout << "Email: " << row[2] << std::endl;
-        // #endif
-        
+        }           
     }
 
     myfile.close();
     return true;
 }
-#endif
 
 std::vector<Contact*> ContactManager::searchContactsByName(const std::string &query)
 {   

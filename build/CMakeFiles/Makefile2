@@ -63,10 +63,12 @@ CMAKE_BINARY_DIR = "D:\Projects\Core Dev\Contact_Manager\build"
 
 # The main recursive "all" target.
 all: CMakeFiles/Contact_Manager_Prod.dir/all
+all: CMakeFiles/Contact_Manager_Test.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/Contact_Manager_Prod.dir/codegen
+codegen: CMakeFiles/Contact_Manager_Test.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,6 +77,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Contact_Manager_Prod.dir/clean
+clean: CMakeFiles/Contact_Manager_Test.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -84,12 +87,12 @@ clean: CMakeFiles/Contact_Manager_Prod.dir/clean
 CMakeFiles/Contact_Manager_Prod.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Prod.dir\build.make CMakeFiles/Contact_Manager_Prod.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Prod.dir\build.make CMakeFiles/Contact_Manager_Prod.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target Contact_Manager_Prod"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" --progress-num=1,2,3,4,5 "Built target Contact_Manager_Prod"
 .PHONY : CMakeFiles/Contact_Manager_Prod.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Contact_Manager_Prod.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" 6
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Contact_Manager_Prod.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" 0
 .PHONY : CMakeFiles/Contact_Manager_Prod.dir/rule
@@ -101,13 +104,45 @@ Contact_Manager_Prod: CMakeFiles/Contact_Manager_Prod.dir/rule
 # codegen rule for target.
 CMakeFiles/Contact_Manager_Prod.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Prod.dir\build.make CMakeFiles/Contact_Manager_Prod.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" --progress-num=1,2,3,4,5,6 "Finished codegen for target Contact_Manager_Prod"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" --progress-num=1,2,3,4,5 "Finished codegen for target Contact_Manager_Prod"
 .PHONY : CMakeFiles/Contact_Manager_Prod.dir/codegen
 
 # clean rule for target.
 CMakeFiles/Contact_Manager_Prod.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Prod.dir\build.make CMakeFiles/Contact_Manager_Prod.dir/clean
 .PHONY : CMakeFiles/Contact_Manager_Prod.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Contact_Manager_Test.dir
+
+# All Build rule for target.
+CMakeFiles/Contact_Manager_Test.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Test.dir\build.make CMakeFiles/Contact_Manager_Test.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Test.dir\build.make CMakeFiles/Contact_Manager_Test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" --progress-num=6,7,8,9,10,11,12,13,14,15 "Built target Contact_Manager_Test"
+.PHONY : CMakeFiles/Contact_Manager_Test.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Contact_Manager_Test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Contact_Manager_Test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" 0
+.PHONY : CMakeFiles/Contact_Manager_Test.dir/rule
+
+# Convenience name for target.
+Contact_Manager_Test: CMakeFiles/Contact_Manager_Test.dir/rule
+.PHONY : Contact_Manager_Test
+
+# codegen rule for target.
+CMakeFiles/Contact_Manager_Test.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Test.dir\build.make CMakeFiles/Contact_Manager_Test.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Projects\Core Dev\Contact_Manager\build\CMakeFiles" --progress-num=6,7,8,9,10,11,12,13,14,15 "Finished codegen for target Contact_Manager_Test"
+.PHONY : CMakeFiles/Contact_Manager_Test.dir/codegen
+
+# clean rule for target.
+CMakeFiles/Contact_Manager_Test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Test.dir\build.make CMakeFiles/Contact_Manager_Test.dir/clean
+.PHONY : CMakeFiles/Contact_Manager_Test.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

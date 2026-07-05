@@ -16,7 +16,7 @@ bool testLinearEmptyQueryReturnsAll();
 
 // BINARY SEARCH
 
-bool testBinarySinglMatchingContact();
+bool testBinarySingleMatchingContact();
 bool testBinaryMultiplePrefixMatch();
 bool testBinaryCaseInsensitiveSearch();
 bool testBinaryNoPrefixMatch();

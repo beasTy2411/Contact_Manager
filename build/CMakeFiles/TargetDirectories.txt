@@ -1,3 +1,4 @@
 D:/Projects/Core Dev/Contact_Manager/build/CMakeFiles/Contact_Manager_Prod.dir
+D:/Projects/Core Dev/Contact_Manager/build/CMakeFiles/Contact_Manager_Test.dir
 D:/Projects/Core Dev/Contact_Manager/build/CMakeFiles/edit_cache.dir
 D:/Projects/Core Dev/Contact_Manager/build/CMakeFiles/rebuild_cache.dir

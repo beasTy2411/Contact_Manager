@@ -3,16 +3,28 @@
 #include "contact.h"
 #include "contact_manager.h"
 
+#define DEBUG 0
+
+#if DEBUG
+    #include <iostream>
+#endif
+
 bool testAddContact()
 {   
     Contact contact("Alice", "123456789", "alice@gmail.com");
     ContactManager manager;
 
     int initial_vector_size = manager.contactSize();
+    #if DEBUG
+        std::cout << "Initial Vector Size: " << initial_vector_size << std::endl;
+    #endif
 
     bool contact_created = manager.addContact(contact);
 
     int final_vector_size = manager.contactSize();
+    #if DEBUG
+        std::cout << "Final Vector Size: " << final_vector_size << std::endl;
+    #endif
 
     Contact* found_contact = manager.searchContactbyNumber(contact.getNumber());
 
@@ -20,6 +32,10 @@ bool testAddContact()
     if(found_contact == nullptr) found_by_number = false;
     else if(contact.getNumber() == found_contact->getNumber()) found_by_number = true;
     else found_by_number = false;
+
+    #if DEBUG
+        std::cout << "Found By Number: " << found_by_number << std::endl;
+    #endif
 
     bool vector_size;
     if(final_vector_size - initial_vector_size == 1) vector_size = true;
