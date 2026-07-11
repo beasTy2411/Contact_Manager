@@ -1,14 +1,19 @@
 // CLASS CONTACT MANAGER IMPLEMENTATION
 #include "contact_manager.h"
-#include "other_utility.h"
+#include "other_utility.h"  // what is other utility , provide proper name
 
 #include <iostream>
 #include <algorithm>
 #include <fstream>
 #include <sstream>
 
+/* General  Comments : Provide documentation for all the methods/APIs (for all files)
+   Add logs for steps so it will be easy to debug 
+*/
 #define DEBUG 0
 #define TEST 1
+
+//What is DEBUG 0 and TEST 1 ? 
 
 ContactManager::ContactManager()
 {
@@ -19,6 +24,7 @@ bool ContactManager::addContact(const Contact& contact)
 {   
     if(searchContactbyNumber(contact.getNumber()))
     {
+        //cout contact already exits , exiting....
        return false;
     } 
 
