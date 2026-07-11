@@ -27,6 +27,18 @@ int main()
     runTest("Searching Empty Query",testLinearEmptyQueryReturnsAll, total_passed, total_failed, total_tests);
     std::cout << "-------------------------------------------\n" << std::endl;
 
+    std::cout << "Running Binary Search Tests" << std::endl;
+    std::cout << "-------------------------------------------" << std::endl;
+    runTest("Single Contact Found",testBinarySingleMatchingContact, total_passed, total_failed, total_tests);
+    runTest("Multiple Prefix Matches",testBinaryMultiplePrefixMatch, total_passed, total_failed, total_tests);
+    runTest("Case Insensitive Search",testBinaryCaseInsensitiveSearch, total_passed, total_failed, total_tests);
+    runTest("Contact Not Found",testBinaryNoPrefixMatch, total_passed, total_failed, total_tests);
+    runTest("First Contact Search",testBinaryFirstContactPrefix, total_passed, total_failed, total_tests);
+    runTest("Last Contact Search",testBinaryLastContactPrefix, total_passed, total_failed, total_tests);
+    runTest("Searching Empty Manager",testBinaryEmptyManager, total_passed, total_failed, total_tests);
+    runTest("Searching Empty Query",testBinaryEmptyPrefixSearch, total_passed, total_failed, total_tests);
+    std::cout << "-------------------------------------------\n" << std::endl;
+
     std::cout << "Tests Completed" << std::endl;
     std::cout << "-------------------------------------------" << std::endl;
     std::cout << "Total Tests Passed: " << total_passed << std::endl;

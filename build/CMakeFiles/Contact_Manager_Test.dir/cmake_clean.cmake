@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Contact_Manager_Test.dir/src/main_utility.cpp.obj.d"
   "CMakeFiles/Contact_Manager_Test.dir/tests/contact_tests.cpp.obj"
   "CMakeFiles/Contact_Manager_Test.dir/tests/contact_tests.cpp.obj.d"
+  "CMakeFiles/Contact_Manager_Test.dir/tests/delete_tests.cpp.obj"
+  "CMakeFiles/Contact_Manager_Test.dir/tests/delete_tests.cpp.obj.d"
   "CMakeFiles/Contact_Manager_Test.dir/tests/helpers.cpp.obj"
   "CMakeFiles/Contact_Manager_Test.dir/tests/helpers.cpp.obj.d"
   "CMakeFiles/Contact_Manager_Test.dir/tests/search_tests.cpp.obj"

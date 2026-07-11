@@ -270,6 +270,30 @@ tests/contact_tests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Test.dir\build.make CMakeFiles/Contact_Manager_Test.dir/tests/contact_tests.cpp.s
 .PHONY : tests/contact_tests.cpp.s
 
+tests/delete_tests.obj: tests/delete_tests.cpp.obj
+.PHONY : tests/delete_tests.obj
+
+# target to build an object file
+tests/delete_tests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Test.dir\build.make CMakeFiles/Contact_Manager_Test.dir/tests/delete_tests.cpp.obj
+.PHONY : tests/delete_tests.cpp.obj
+
+tests/delete_tests.i: tests/delete_tests.cpp.i
+.PHONY : tests/delete_tests.i
+
+# target to preprocess a source file
+tests/delete_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Test.dir\build.make CMakeFiles/Contact_Manager_Test.dir/tests/delete_tests.cpp.i
+.PHONY : tests/delete_tests.cpp.i
+
+tests/delete_tests.s: tests/delete_tests.cpp.s
+.PHONY : tests/delete_tests.s
+
+# target to generate assembly for a file
+tests/delete_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Contact_Manager_Test.dir\build.make CMakeFiles/Contact_Manager_Test.dir/tests/delete_tests.cpp.s
+.PHONY : tests/delete_tests.cpp.s
+
 tests/helpers.obj: tests/helpers.cpp.obj
 .PHONY : tests/helpers.obj
 
@@ -415,6 +439,9 @@ help:
 	@echo ... tests/contact_tests.obj
 	@echo ... tests/contact_tests.i
 	@echo ... tests/contact_tests.s
+	@echo ... tests/delete_tests.obj
+	@echo ... tests/delete_tests.i
+	@echo ... tests/delete_tests.s
 	@echo ... tests/helpers.obj
 	@echo ... tests/helpers.i
 	@echo ... tests/helpers.s

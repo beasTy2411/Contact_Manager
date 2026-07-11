@@ -76,5 +76,11 @@
   "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\tests\\test_data.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\tests\\test_data.cpp\"",
   "file": "D:/Projects/Core Dev/Contact_Manager/tests/test_data.cpp",
   "output": "CMakeFiles/Contact_Manager_Test.dir/tests/test_data.cpp.obj"
+},
+{
+  "directory": "D:/Projects/Core Dev/Contact_Manager/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Contact_Manager_Test.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Contact_Manager_Test.dir\\tests\\delete_tests.cpp.obj -c \"D:\\Projects\\Core Dev\\Contact_Manager\\tests\\delete_tests.cpp\"",
+  "file": "D:/Projects/Core Dev/Contact_Manager/tests/delete_tests.cpp",
+  "output": "CMakeFiles/Contact_Manager_Test.dir/tests/delete_tests.cpp.obj"
 }
 ]

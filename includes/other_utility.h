@@ -34,7 +34,7 @@ int binarySearch(const std::string& query,int start_index, int last_index, std::
     std::string lowercase_contact_name = contacts[mid].getName();
         toLowerCase(lowercase_contact_name);
 
-    int compare = lowercase_contact_name.compare(0, query.length(), query);
+    int compare = lowercase_contact_name.compare(0, query.length(), lowercase_query);
 
     if(compare == 0)
     {

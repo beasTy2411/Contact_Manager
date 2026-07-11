@@ -22,7 +22,8 @@ add_executable(Contact_Manager_Test
     tests/contact_tests.cpp
     tests/helpers.cpp
     tests/search_tests.cpp
-    tests/test_data.cpp        
+    tests/test_data.cpp
+    tests/delete_tests.cpp      
 )
 
 target_include_directories(Contact_Manager_Test PRIVATE includes)

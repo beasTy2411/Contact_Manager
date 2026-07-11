@@ -23,3 +23,4 @@ bool testBinaryNoPrefixMatch();
 bool testBinaryFirstContactPrefix();
 bool testBinaryLastContactPrefix();
 bool testBinaryEmptyPrefixSearch();
+bool testBinaryEmptyManager();
