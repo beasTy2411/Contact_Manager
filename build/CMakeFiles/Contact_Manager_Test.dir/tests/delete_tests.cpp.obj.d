@@ -1,6 +1,7 @@
-CMakeFiles/Contact_Manager_Test.dir/tests/test_main.cpp.obj: \
- D:\Projects\Core\ Dev\Contact_Manager\tests\test_main.cpp \
- D:/Projects/Core\ Dev/Contact_Manager/includes/test_runner.h \
+CMakeFiles/Contact_Manager_Test.dir/tests/delete_tests.cpp.obj: \
+ D:\Projects\Core\ Dev\Contact_Manager\tests\delete_tests.cpp \
+ D:/Projects/Core\ Dev/Contact_Manager/includes/delete_tests.h \
+ D:/Projects/Core\ Dev/Contact_Manager/includes/contact.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\c++config.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\os_defines.h \
@@ -79,28 +80,12 @@ CMakeFiles/Contact_Manager_Test.dir/tests/test_main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\functional_hash.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\hash_bytes.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.tcc \
- D:/Projects/Core\ Dev/Contact_Manager/includes/contact_tests.h \
- D:/Projects/Core\ Dev/Contact_Manager/includes/search_tests.h \
- D:/Projects/Core\ Dev/Contact_Manager/includes/delete_tests.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.tcc \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\system_error \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\error_constants.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdexcept \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\streambuf \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\streambuf.tcc \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_ios.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwctype \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\ctype_base.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\streambuf_iterator.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\ctype_inline.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets.tcc \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_ios.tcc \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ostream.tcc \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc
+ D:/Projects/Core\ Dev/Contact_Manager/includes/contact_manager.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\vector \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_construct.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_uninitialized.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_vector.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_bvector.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\vector.tcc \
+ D:/Projects/Core\ Dev/Contact_Manager/includes/test_data.h \
+ D:/Projects/Core\ Dev/Contact_Manager/includes/helpers.h

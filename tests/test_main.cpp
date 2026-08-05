@@ -1,6 +1,7 @@
 #include "test_runner.h"
 #include "contact_tests.h"
 #include "search_tests.h"
+#include "delete_tests.h"
 
 #include <iostream>
 
@@ -37,6 +38,14 @@ int main()
     runTest("Last Contact Search",testBinaryLastContactPrefix, total_passed, total_failed, total_tests);
     runTest("Searching Empty Manager",testBinaryEmptyManager, total_passed, total_failed, total_tests);
     runTest("Searching Empty Query",testBinaryEmptyPrefixSearch, total_passed, total_failed, total_tests);
+    std::cout << "-------------------------------------------\n" << std::endl;
+
+    std::cout << "Running Delete Tests" << std::endl;
+    std::cout << "-------------------------------------------" << std::endl;
+    runTest("Delete Existing Contact", testDeleteExistingContact, total_passed, total_failed, total_tests);
+    runTest("Delete One From Same Prefix", testDeleteOneFromSamePrefixContact, total_passed, total_failed, total_tests);
+    runTest("Delete the Only Contact" , testDeleteOnlyContact, total_passed, total_failed, total_tests);
+    runTest("Delete Null Contact", testDeleteNullContact, total_passed, total_failed, total_tests);
     std::cout << "-------------------------------------------\n" << std::endl;
 
     std::cout << "Tests Completed" << std::endl;

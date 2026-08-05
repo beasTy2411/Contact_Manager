@@ -1,8 +1,6 @@
 #pragma once
 
 bool testDeleteExistingContact();
-bool testDeleteNonExistingContact();
-bool testDeleteFirstContact();
-bool testDeleteLastContact();
+bool testDeleteOneFromSamePrefixContact();
 bool testDeleteOnlyContact();
-bool testDeleteContactFromEmptyManager();
+bool testDeleteNullContact();
